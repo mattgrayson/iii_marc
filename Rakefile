@@ -4,13 +4,18 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "iii-marc"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.name = "iii_marc"
+    gem.summary = %Q{Utilities for interacting with III Millennium WebPac. 
+      Primary goal is to retrieve and parse bibliographic records via the 
+      WebPac proto-MARC output.}
+    gem.description = gem.summary
     gem.email = "mattgrayson@eitheror.org"
-    gem.homepage = "http://github.com/mattgrayson/iii-marc"
+    gem.homepage = "http://github.com/mattgrayson/iii_marc"
     gem.authors = ["Matt Grayson"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_runtime_dependency "enhanced_marc"
+    gem.add_runtime_dependency "htmlentities"
+    gem.add_runtime_dependency "patron"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -47,7 +52,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "iii-marc #{version}"
+  rdoc.title = "iii_marc #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
