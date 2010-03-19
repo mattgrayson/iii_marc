@@ -2,13 +2,14 @@
 
 Utilities for interacting with III Millennium WebPac. Primary goal is to
 retrieve and parse bibliographic records via the WebPac proto-MARC output.
+It has only been tested against Release 2007 with WebPac Pro. 
 
 Required: marc
 Required: enhanced_marc
-Required: patron
+Required: httparty
 Required: htmlentities
 
 
 == Copyright
 
-Copyright (c) 2009 Matt Grayson. See LICENSE for details.
+Copyright (c) 2009-2010 Matt Grayson. See LICENSE for details.

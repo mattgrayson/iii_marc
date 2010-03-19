@@ -1,12 +1,17 @@
-module MARC  
+module MARC
   class IIIReader
-    attr_accessor :record_uri, :marc_uri
+    
+    class ParserError < RuntimeError; end
+    class NonExistentRecordError < RuntimeError; end
+    
+    include HTTParty
+    
+    attr_accessor :base_uri, :record_uri, :marc_uri
     attr_reader :coder
     
     def initialize(opac_uri)
       @entities = HTMLEntities.new      
-      @conn = Patron::Session.new
-      @conn.base_url = opac_uri
+      self.class.base_uri(opac_uri)
     end
     
     
@@ -24,8 +29,8 @@ module MARC
     end
         
     def get_page(uri)
-      resp = @conn.get(uri)
-      if resp.status < 400
+      resp = self.class.get(uri)
+      if resp.code < 400
         resp.body
       else
         nil
@@ -71,20 +76,32 @@ module MARC
         
         # Retrieve MARC data and convert to UTF-8 prior to decoding ...
         record_page = get_page(marc_url)
-        record_data = MARC_REGEX.match(record_page)[1].strip()
-        record_data = Iconv.conv('UTF-8','LATIN1',record_data)
+        record_data = MARC_REGEX.match(record_page)
         
+        if record_data.nil?
+          raise ParserError, "Could not decode data: MARC data not found."
+        else
+          record_data = record_data[1].strip()
+          record_data = Iconv.conv('UTF-8','LATIN1',record_data)
+        end
+
         record = decode_raw(record_data)
         unless record.nil?
           record.bibnum = bibnumber
           record.raw = record_data
-          record.record_url = "#{@conn.base_url}#{record_url}"
-          record.marc_url = "#{@conn.base_url}#{marc_url}"
+          record.record_url = "#{self.class.base_uri}#{record_url}"
+          record.marc_url = "#{self.class.base_uri}#{marc_url}"
         end
         return record
       else
-        return nil
+        raise NonExistentRecordError, "Record not found."
       end
+    rescue NonExistentRecordError => error
+      warn error.message
+      return nil
+    rescue ParserError => error  
+      warn error.message
+      return nil
     end
     
     
@@ -94,15 +111,15 @@ module MARC
     # Only data conversion done is replacing HTML entities with their 
     # corresponding characters
     def decode_raw(pseudo_marc)
-      pseudo_marc = pseudo_marc.split("\n")
+      raise ParserError, "Cannot decode empty string." if pseudo_marc == ""
+      
+      pseudo_marc = pseudo_marc.split("\n")      
       raw_fields = []
       
       if pseudo_marc[0][0..5] == "LEADER"
         record = create_record_for_type(pseudo_marc[0][7..-1])
       else
-        # For now, just return nil when encountering an invalid record
-        # Example: http://opac.utmem.edu/search~S2?/.b1052826/.b1052826/1%2C1%2C1%2CB/marc~b1052826
-        return nil
+        raise ParserError, "Cannot decode record without a leader."
       end
             
       pseudo_marc[1..pseudo_marc.length].each do |field|
@@ -113,17 +130,11 @@ module MARC
             :tag => field[0..2], 
             :indicator1 => field[4,1], 
             :indicator2 => field[5,1], 
-            :value => data, 
+            :value => data.strip, 
             :raw => field.strip
           }
-        else
-          # Additional field data needs to be prepended with an extra space 
-          # for certain fields ...
-          ['55','260'].each do |special_tag|
-            data = raw_fields.last[:tag].starts_with(special_tag) ? " #{data}" : data
-          end
-          
-          raw_fields.last[:value] += data
+        else          
+          raw_fields.last[:value] += " #{data}"
           raw_fields.last[:raw] += field.strip
         end
       end

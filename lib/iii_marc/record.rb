@@ -47,7 +47,13 @@ module MARC
     end
     
     def call_number
-      self['096'].empty? ? "" : self['096'][0].value
+      if !self['096'].empty?
+        self['096'][0].value
+      elsif !self['060'].empty?
+        self['060'][0].value
+      else
+        ""
+      end
     end
     
     def comp_file_characteristics
@@ -56,6 +62,17 @@ module MARC
     
     def contents
       self['505'].empty? ? [] : self['505'].collect { |field| field.value }.join(" ")
+    end
+    
+    def date_published
+      if !self['260'].empty? and !self['260'][0]['c'].nil?
+        puts self['260'][0]['c']
+        self['260'][0]['c'].strip_end_punctuation
+      elsif !self['096'].empty? and !self['096'][0]['c'].nil?
+        self['096'][0]['c'].strip_end_punctuation
+      else
+        ""
+      end
     end
     
     def edition
@@ -126,6 +143,10 @@ module MARC
       end
     end
     
+    def kind
+      self.leader.record_type
+    end
+    
     def notes
       ignore = [505,506,520,580,590] # 590 is a local notes field that isn't particularly relevant outside of III
       notes = []
@@ -141,7 +162,15 @@ module MARC
     end
     
     def publishers
-      self['260'].empty? ? [] : self['260'].collect { |field| field.value }
+      self['260'].empty? ? [] : self['260'].collect { |field| field.value.strip_end_punctuation }
+    end
+    
+    def publisher_names
+      if self['260'].empty? or self['260'][0]['b'].nil?
+        []
+      else
+        self['260'].collect { |field| field['b'].strip_end_punctuation }
+      end
     end
     
     def pub_dates
@@ -163,6 +192,14 @@ module MARC
     
     def series_main
       self['760'].empty? ? [] : self['760'].collect { |field| field.value }
+    end
+    
+    def statement_of_responsibility
+      unless self['245'].empty? or self['245'][0]['c'].nil?
+        self['245'][0]['c'].strip_end_punctuation
+      else
+        ""
+      end
     end
     
     def subjects
@@ -189,8 +226,15 @@ module MARC
       self['772'].empty? ? [] : self['772'].collect { |field| field.value }
     end
     
-    def title
-      self['245'].empty? ? "" : self['245'][0].value
+    def title      
+      if self['245'].empty?
+        title = ""
+      else 
+        title = self['245'][0]['a'].nil? ? '' : self['245'][0]['a']
+        title = "#{t} #{self['245'][0]['b']}" unless self['245'][0]['b'].nil?
+        title = "#{t} #{self['245'][0]['p']}" unless self['245'][0]['p'].nil?
+      end
+      title.strip_end_punctuation
     end
     
     def title_varying_forms
@@ -274,5 +318,84 @@ module MARC
       return kw.uniq.select{ |w| !KEYWORD_STOPWORDS.include?(w) }.collect{ |w| w.to_s.gsub(/[(,?!\'":.)]/, '') }.sort
     end
     
+    
+    def debug_output
+      puts '*'*60
+      puts "Bib #: #{self.bibnum}"
+      puts "Check digit: #{self.check_digit}"
+      puts "Call #: #{self.call_number}"
+      puts "Record URL: #{self.record_url}"
+      puts "MARC URL: #{self.marc_url}"
+      puts "Type: #{self.kind}"
+      
+      puts '-'*60
+      
+      puts "Title: #{self.title}"
+      puts "Statement of Responsibility: #{self.statement_of_responsibility}"
+      puts "ISSN(s): #{self.issn.join(', ')}" if self.issn
+      puts "ISBN(s): #{self.isbn.join(', ')}" if self.isbn
+      puts "Publisher(s): #{self.publishers.join(', ')}"
+      puts "Publisher name(s): #{self.publisher_names.join(', ')}"
+      puts "Date publised: #{self.date_published}"
+      puts "URLs:"
+      self.links.each do |l|
+        puts "- #{l[:label]}: #{l[:url]}"
+      end
+      puts "Author: #{self.author}"
+      puts "Author dates: #{self.author_dates}"
+      puts "Other authors: "
+      self.other_authors.each do |a|
+        puts "- #{a}"
+      end
+      
+      puts '-'*60
+      
+      puts "Uniform title: #{self.title_uniform}"
+      puts "Abbreviated title(s): #{self.title_abbrv.join(', ')}"
+      puts "Key title(s): #{self.title_key.join(', ')}"
+      puts "Varying form(s) of title: #{self.title_varying_forms.join(', ')}"
+      
+      puts "Edition: #{self.edition}"
+      puts "Computer file characteristics: #{self.comp_file_characteristics}"
+      puts "Physical description: #{self.physical_description}"
+      
+      puts "Publication frequency: #{self.pub_frequency}"
+      puts "Former publication frequencies: #{self.former_pub_frequencies.join('; ')}"
+      puts "Publication dates: #{self.pub_dates.join('; ')}"
+      puts "Series: #{self.series.join('; ')}"
+      
+      puts '-'*60
+      
+      puts "Notes: "
+      self.notes.each do |n|
+        puts " - #{n}"
+      end
+       
+      puts "Summary: #{self.summary}"
+      puts "Contents: #{self.contents}"
+      puts "Subjects: "
+      self.subjects.each do |s|
+        puts " - #{s}"
+      end
+
+      puts "Preceding titles: "
+      self.entries_preceding.each do |ep|
+        puts " - #{ep['title']}"
+      end
+      
+      puts "Succeeding titles: "
+      self.entries_succeeding.each do |es|
+        puts " - #{es['title']}"
+      end
+      
+      puts "Entry notes:"
+      self.entry_notes.each do |en|
+        puts " - #{en}"
+      end
+      
+      puts '-'*60
+      puts self.class
+      puts '*'*60
+    end    
   end
 end

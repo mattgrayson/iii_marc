@@ -12,10 +12,11 @@ begin
     gem.email = "mattgrayson@eitheror.org"
     gem.homepage = "http://github.com/mattgrayson/iii_marc"
     gem.authors = ["Matt Grayson"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_development_dependency "shoulda"
+    gem.add_development_dependency "fakeweb"
     gem.add_runtime_dependency "enhanced_marc"
     gem.add_runtime_dependency "htmlentities"
-    gem.add_runtime_dependency "patron"
+    gem.add_runtime_dependency "httparty"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
