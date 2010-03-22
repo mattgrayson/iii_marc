@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<!-- mainmenu.html --> 
+<!-- This file last changed: 19 February, 2008 --> 
+<head> 
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" /> 
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" /> 
+<script language="JavaScript" type="text/javascript" src="/scripts/common.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/scripts/features.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/scripts/webbridge.js"></script> 
+<title>UTHSC Library Catalog</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" /> 
+<!--[if lte IE 7]><link rel="stylesheet" media="all" type="text/css" href="/screens/css/ie.css" /><![endif]--> 
+</head> 
+ 
+<body> 
+<!-- begin toplogo.html file --> 
+<!-- This file last changed: 12 February, 2008 --> 
+<div id="sanity-wrap"> 
+<div id="header"> 
+	<h1><a href="http://www.uthsc.edu/">The University of Tennessee Health Science Center</a></h1>				
+	<h2>UTHSC Library</h2> 
+	<ul>	
+		<li><a href="https://exchange.uthsc.edu">Exchange Mail</a></li> 
+	  	<li><a href="http://courses.uthsc.edu">Blackboard</a></li> 
+	  	<li><a href="http://login.uthsc.edu">iLogin</a></li> 
+	   	<li><a href="http://utap.tennessee.edu">MyUT</a></li> 
+		<li class="last"> 
+			<form action="http://www.uthsc.edu/search/query.php" method="post" accept-charset="utf-8">					
+	      	<label for="some_name">Enter Search Items</label> 
+	        <input type="text" name="query" onfocus="this.value=''" value="Enter Search Items" id="some_name" class="text" />		         
+	        <label for="select_search">Select Search Option</label> 
+	        <select size="1" name="col" id="select_search"> 
+	        	<option value="utmem">Campus</option> 
+	         	<option value="ldap" selected="selected">People</option> 
+	         	<option value="utk utmem utm utc utsi utsa utia utips">System</option> 
+	        </select> 
+	        <input type="submit" value="Go" class="button" />		      
+	    	</form> 
+ 			</li> 
+ 		</ul>			
+</div> <!-- header --> 
+ 
+<div id="department"><div id="department_inner"> 
+	<div id="department_name"> 
+		<a href="http://opac.uthsc.edu/search">Library Catalog</a> 
+	</div><!-- department_name --> 
+	
+	<div id="crumbs"> 
+       <div id="department_crumbs"> 
+           <a href="http://library.uthsc.edu/" title="Go to library homepage">Home</a> 
+           <img src="http://library.uthsc.edu/wp-content/themes/utbase/images/arrow_mini_right.gif" alt=""> 
+           Catalog
+       </div> 
+    </div> 
+</div></div><!-- department --> 
+ 
+<div id="content"><div id="content_inner"> 
+	<div id="main_nav" class="no_content"></div> <!-- main_nav --> 
+	
+	<div id="main_content" class="full_page_width">	    
+<!--end toplogo.html--> 
+ 
+ 
+ 
+<div id="search_title_wrapper"><div id="search_title"> 
+  <h1>Advanced Search</h1> 
+  <a id="help_button" href="/screens/help_index.html">Search Help</a> 
+  <a id="advanced_button" href="/search">&laquo; Basic Search</a>  
+</div></div> 
+ 
+<div class="bibAdvancedSearchtool commonContainer"> 
+  <p> 
+<br /><h2>NO ENTRIES FOUND</h2><br /> 
+  </p> 
+ 
+<script language="JavaScript" type="text/javascript"> 
+ 
+//global variables below are set by webpac
+encode = "";
+savedScopeIndex = -1;
+//this func is created at runtime by webpac
+function AdvancedSearchForm_initLimits(ths, form)
+{
+ 
+ths.limitArray.lang = (form.elements["l"]) ? form.elements["l"] : "";
+ths.limitArray.mattype = (form.elements["m"]) ? form.elements["m"] : "";
+ths.limitArray.branch = (form.elements["b"]) ? form.elements["b"] : "";
+ths.limitArray.publish = (form.elements["p"]) ? form.elements["p"] : "";
+ths.limitArray.invnum = (form.elements["i"]) ? form.elements["i"] : "";
+ths.limitArray.accsprvdr = (form.elements["a"]) ? form.elements["a"] : "";
+}
+ 
+</script> 
+<!-- FOR USE IN ADVANCED SEARCH PAGES (e.g.: srchhelp_X.html) ONLY --> 
+<!-- FOR PHRASE SEARCH PAGES USE TOKEN: formbegin --> 
+<form action="#" enctype="multipart/form-data: " name="search" id="search" onsubmit="return submitSearch(this, '/search~S2/X', false);"> 
+  <div id="bibAdvSearchFields"> 
+<select name="fieldLimit1"> 
+ 
+<option value="" selected="selected">Any Field:</option> 
+<option value="a:">AUTHOR:</option> 
+<option value="t:">TITLE:</option> 
+<option value="d:">SUBJECT:</option> 
+<option value="N:">Note:</option> 
+</select> 
+<input maxlength="75" size="35" name="searchText1" /> 
+<select name="boolean1"> 
+ 
+<option value="+and+" selected="selected">And</option> 
+<option value="+and+not+">And not</option> 
+<option value="+or+">Or</option> 
+<option value="+near+">Near</option> 
+<option value="+before+">Before</option> 
+<option value="+after+">After</option> 
+</select> 
+<br /> 
+<select name="fieldLimit2"> 
+ 
+<option value="" selected="selected">Any Field:</option> 
+<option value="a:">AUTHOR:</option> 
+<option value="t:">TITLE:</option> 
+<option value="d:">SUBJECT:</option> 
+<option value="N:">Note:</option> 
+</select> 
+<input maxlength="75" size="35" name="searchText2" /> 
+<select name="boolean2"> 
+ 
+<option value="+and+" selected="selected">And</option> 
+<option value="+and+not+">And not</option> 
+<option value="+or+">Or</option> 
+<option value="+near+">Near</option> 
+<option value="+before+">Before</option> 
+<option value="+after+">After</option> 
+</select> 
+<br /> 
+<select name="fieldLimit3"> 
+ 
+<option value="" selected="selected">Any Field:</option> 
+<option value="a:">AUTHOR:</option> 
+<option value="t:">TITLE:</option> 
+<option value="d:">SUBJECT:</option> 
+<option value="N:">Note:</option> 
+</select> 
+<input maxlength="75" size="35" name="searchText3" /> 
+<select name="boolean3"> 
+ 
+<option value="+and+" selected="selected">And</option> 
+<option value="+and+not+">And not</option> 
+<option value="+or+">Or</option> 
+<option value="+near+">Near</option> 
+<option value="+before+">Before</option> 
+<option value="+after+">After</option> 
+</select> 
+<br /> 
+<select name="fieldLimit4"> 
+ 
+<option value="" selected="selected">Any Field:</option> 
+<option value="a:">AUTHOR:</option> 
+<option value="t:">TITLE:</option> 
+<option value="d:">SUBJECT:</option> 
+<option value="N:">Note:</option> 
+</select> 
+<input maxlength="75" size="35" name="searchText4" /> 
+ 
+  </div><!-- bibAdvSearchFields --> 
+  
+  <div id="bibAdvSearchLimts"> 
+    <p> 
+<input type="checkbox" name="availlim" value="1" /> 
+<span class="availLimMessage">Limit search to available items</span>    </p> 
+    <p class="fieldgroup third"> 
+      <strong>Item Type: </strong> 
+      <select name="b"> 
+        <option value="">All</option> 
+        <option value="avs">Audiovisual</option> 
+        <option value="book">Book</option> 
+        <option value="ebook">eBook</option> 
+        <option value="ejour">eJournal</option> 
+        <option value="hist">History</option> 
+        <option value="journ">Journal</option> 
+        <option value="thesi">Thesis/Dissertation</option> 
+      </select> 
+    </p> 
+    
+    <p class="fieldgroup third"> 
+      <strong>Sorted By:</strong>    
+      <select name="SORT"> 
+        <option selected="selected" value="D">Relevance</option> 
+        <option value="DX">Date</option> 
+        <option value="AX">Title</option> 
+      </select> 
+    </p> 
+    
+    <p class="fieldgroup third"> 
+      <strong>Publisher: </strong> 
+      <input type="text" value="" name="p" size="20" /> 
+    </p> 
+    
+    <p class="fieldgroup third"> 
+      <strong>Year of Publication</strong> 
+      <span class="field"> 
+        <input type="text" value="" name="Da" size="10"/> 
+        <label for="Da">After</label> 
+      </span> 
+      <span class="field"> 
+        <input type="text" value="" name="Db" size="10"/> 
+        <label for="Db">and Before</label> 
+      </span> 
+    </p> 
+  </div><!-- bibAdvSearchLimts --> 
+  
+  <p> 
+  <input type="submit" name="submit" value="Search" id="submit" /> 
+  </p> 
+ 
+</div> 
+ 
+<!-- begin botlogo.html file --> 
+<!-- This file last changed: 23 September, 2009 --> 
+</div> <!-- main-content --> 
+</div></div><!-- content -->	
+ 
+<div id="footer"><div id="footer_inner"> 
+<img src="http://www.uthsc.edu/images/footer_icon.gif" alt="UT logo" /> 
+<p>&#169; 2007 <a href="http://library.uthsc.edu/">The University of Tennessee Health Sciences Library and 
+  Biocommunications Center</a></p> 
+<p>877 Madison Ave., Memphis, Tennessee 38163 &middot; 901-448-5634</p> 
+<p> 
+	<a href="http://library.uthsc.edu/">Library Homepage</a> |
+	<a href="http://library.uthsc.edu/reference/askalibrarian">Contact the Library</a> | 
+	<a href="mailto:webmaster@library.uthsc.edu">Library Webmaster</a> 
+</p> 
+</div></div><!-- footer --> 
+</div> 
+ 
+<script type="text/javascript" charset="utf-8" src="/screens/js/jquery-1.2.3.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="/screens/js/ut.js"></script> 
+ 
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-168455-8");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+<!-- end botlogo.html file --> 
+</body> 
+</html> 
+<!--this is customized <screens/srchhelp_X.html>-->

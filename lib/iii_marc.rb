@@ -3,6 +3,8 @@ require 'enhanced_marc'
 require 'htmlentities'
 require 'iconv'
 require 'httparty'
+require 'nokogiri'
+require 'uri'
 
 require 'iii_marc/utils'
 require 'iii_marc/constants'

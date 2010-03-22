@@ -1,0 +1,2411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<title>Health Sciences Library & Biocommunications Center                       /UTHSC</title> 
+<base target="_self"/> 
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" /> 
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" /> 
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" /> 
+<script language="JavaScript" type="text/javascript" src="/scripts/common.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/scripts/features.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/scripts/webbridge.js"></script> 
+ 
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!--[if lte IE 7]><link rel="stylesheet" media="all" type="text/css" href="/screens/styles.ie.css" /><![endif]--> 
+</head> 
+<body bgcolor="#FFFFFF" > 
+<!-- begin toplogo.html file --> 
+<!-- This file last changed: 12 February, 2008 --> 
+<div id="sanity-wrap"> 
+<div id="header"> 
+	<h1><a href="http://www.uthsc.edu/">The University of Tennessee Health Science Center</a></h1>				
+	<h2>UTHSC Library</h2> 
+	<ul>	
+		<li><a href="https://exchange.uthsc.edu">Exchange Mail</a></li> 
+	  	<li><a href="http://courses.uthsc.edu">Blackboard</a></li> 
+	  	<li><a href="http://login.uthsc.edu">iLogin</a></li> 
+	   	<li><a href="http://utap.tennessee.edu">MyUT</a></li> 
+		<li class="last"> 
+			<form action="http://www.uthsc.edu/search/query.php" method="post" accept-charset="utf-8">					
+	      	<label for="some_name">Enter Search Items</label> 
+	        <input type="text" name="query" onfocus="this.value=''" value="Enter Search Items" id="some_name" class="text" />		         
+	        <label for="select_search">Select Search Option</label> 
+	        <select size="1" name="col" id="select_search"> 
+	        	<option value="utmem">Campus</option> 
+	         	<option value="ldap" selected="selected">People</option> 
+	         	<option value="utk utmem utm utc utsi utsa utia utips">System</option> 
+	        </select> 
+	        <input type="submit" value="Go" class="button" />		      
+	    	</form> 
+ 			</li> 
+ 		</ul>			
+</div> <!-- header --> 
+ 
+<div id="department"><div id="department_inner"> 
+	<div id="department_name"> 
+		<a href="http://opac.uthsc.edu/search">Library Catalog</a> 
+	</div><!-- department_name --> 
+	
+	<div id="crumbs"> 
+       <div id="department_crumbs"> 
+           <a href="http://library.uthsc.edu/" title="Go to library homepage">Home</a> 
+           <img src="http://library.uthsc.edu/wp-content/themes/utbase/images/arrow_mini_right.gif" alt=""> 
+           Catalog
+       </div> 
+    </div> 
+</div></div><!-- department --> 
+ 
+<div id="content"><div id="content_inner"> 
+	<div id="main_nav" class="no_content"></div> <!-- main_nav --> 
+	
+	<div id="main_content" class="full_page_width">	    
+<!--end toplogo.html--> 
+ 
+ 
+ 
+<div align="center" class="navigationRow"> 
+<form> 
+<a href="/">Start Over</a> 
+<a href="/search~S2/X?NOSRCH=cancer&SORT=D&SUBKEY=cancer"><img src="/screens/modify.gif" alt="Modify Search" border="0" /></a> 
+ 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/webaddress0"><img src="/screens/moreinfo.gif" border="0" alt="More Information" /></a> 
+<a href="/search~S2/X"><img src="/screens/another.gif" alt="Another Search" border="0" /></a> 
+<select name=HISTORY onChange="onSelectChange(this, '~S2')"><option value="">(Search History)</option> 
+<OPTION VALUE="Xcancer&SORT=D&searchscope=2">KEYWORD: cancer in UTHSC
+<OPTION VALUE="Xcancer&SORT=DZ&searchscope=2">KEYWORD: cancer in UTHSC
+<OPTION VALUE="Xcancer&searchscope=2&SORT=DZ">KEYWORD: cancer in UTHSC
+<option value="+/search~S2/X?cancer&SORT=D&clear_history">(Clear Search History)</option> 
+<option value="+/">(End Search Session)</option> 
+</select> 
+<noscript> 
+<h2>Search history function requires JavaScript</h2> 
+</noscript> 
+</form> 
+</div> 
+ 
+<!-- BEGIN BROWSE SCREEN TABLE --> 
+<table width="100%" cellpadding="2" cellspacing="0" border="0" class="browseScreen"> 
+<!-- BEGIN SEARCH WIDGET --> 
+<div align="center"> 
+<tr align="center" valign="middle"> 
+<td valign="middle" colspan="2"> 
+<div  class="browseSearchtool"> 
+<script language="JavaScript" type="text/JavaScript"> 
+<!-- Hide the JS
+var savedTag;
+var savedSearch;
+var savedExactSearch = null; 
+ 
+var savedScope
+var sortButtonText = null;
+ 
+var sortTypes = new Array();
+var sortLabels = new Array();
+sortTypes[0] = "t";
+sortLabels[0] = "Title";
+sortTypes[1] = "a";
+sortLabels[1] = "Author";
+sortTypes[2] = "c";
+sortLabels[2] = "Year";
+sortTypes[3] = "r";
+sortLabels[3] = "Reverse Year";
+sortTypes[4] = "n";
+sortLabels[4] = "Call Number";
+sortTypes[5] = "m";
+sortLabels[5] = "Material Type";
+sortLabels[6] = "System Sorted";
+sortTypes[6] = "-";
+var sortSelectedValue = "6";
+var sortExactBrowseURL = "/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/browse"
+var nonSortTags = "XYZprWw"
+// Unhide the JS -->
+</script> 
+<form name="searchtool" target="_self" action="/search~S2/"> 
+      <select name="searchtype" id="searchtype" onChange="initSort()"> 
+        <option value="a"> AUTHOR</option> 
+        <option value="t"> TITLE</option> 
+        <option value="d"> SUBJECT</option> 
+        <option value="c"> CALL NO</option> 
+        <option value="X" selected="selected"> KEYWORD</option> 
+      </select> 
+      &nbsp;
+      <input type="text" name="searcharg" size="30" maxlength="75" value="cancer" /> 
+      &nbsp;
+ 
+<span id="sort_cell"> 
+</span> 
+ 
+<script language="JavaScript" type="text/JavaScript"> 
+<!-- Hide the JS
+initSort();
+// Unhide the JS -->
+</script> 
+      <input type="hidden" name="SORT" value="DZ" /><input type="hidden" name="extended" value="0" /><input type="submit" name="SUBMIT" value="Search" /> 
+<div> 
+      <input type="checkbox" name="availlim" value="1"  /> <span class="availLimMessage">Limit search to available items</span><br/> 
+</div> 
+<div> 
+      <input type="hidden" name="searchlimits" value="" /> 
+      <input type="hidden" name="searchorigarg" value="Xcancer" /> 
+</div> 
+</form> 
+<div  class="browseSearchtoolMessage">       <i>1037 results found. </i>Sorted by  <strong>relevance</strong>  | <a href="/search~S2/X?cancer&SORT=DX">date</a>  | <a href="/search~S2/X?cancer&SORT=AX">title</a> .
+</div> 
+<div></div></div> 
+ 
+</td> 
+</tr> 
+</div> 
+<!-- END SEARCH WIDGET --> 
+ 
+<!-- BEGIN BROWSE PAGER --> 
+<!-- begin page widgit --> 
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5"> 
+ 
+Result Page&nbsp;&nbsp;&nbsp;<strong>1</strong> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/51%2C1037%2C1037%2CB/browse">2</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/101%2C1037%2C1037%2CB/browse">3</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/151%2C1037%2C1037%2CB/browse">4</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/201%2C1037%2C1037%2CB/browse">5</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/251%2C1037%2C1037%2CB/browse">6</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/301%2C1037%2C1037%2CB/browse">7</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/351%2C1037%2C1037%2CB/browse">8</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/401%2C1037%2C1037%2CB/browse">9</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/451%2C1037%2C1037%2CB/browse">10</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/501%2C1037%2C1037%2CB/browse">11</a> 
+...
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1001%2C1037%2C1037%2CB/browse">21</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/51%2C1037%2C1037%2CB/browse">Next Record</a> 
+<!-- end page widgit --> 
+</td> 
+</tr> 
+<!-- END BROWSE PAGER --> 
+ 
+<style type="text/css"> 
+<!--
+#rategroup1 { display: inline }
+#rateneed1  { display: none }
+#rategroupMy1 { display: none }
+#ratemy1      { display: inline }
+#rategroup2 { display: inline }
+#rateneed2  { display: none }
+#rategroupMy2 { display: none }
+#ratemy2      { display: inline }
+#rategroup3 { display: inline }
+#rateneed3  { display: none }
+#rategroupMy3 { display: none }
+#ratemy3      { display: inline }
+#rategroup4 { display: inline }
+#rateneed4  { display: none }
+#rategroupMy4 { display: none }
+#ratemy4      { display: inline }
+#rategroup5 { display: inline }
+#rateneed5  { display: none }
+#rategroupMy5 { display: none }
+#ratemy5      { display: inline }
+#rategroup6 { display: inline }
+#rateneed6  { display: none }
+#rategroupMy6 { display: none }
+#ratemy6      { display: inline }
+#rategroup7 { display: inline }
+#rateneed7  { display: none }
+#rategroupMy7 { display: none }
+#ratemy7      { display: inline }
+#rategroup8 { display: inline }
+#rateneed8  { display: none }
+#rategroupMy8 { display: none }
+#ratemy8      { display: inline }
+#rategroup9 { display: inline }
+#rateneed9  { display: none }
+#rategroupMy9 { display: none }
+#ratemy9      { display: inline }
+#rategroup10 { display: inline }
+#rateneed10  { display: none }
+#rategroupMy10 { display: none }
+#ratemy10      { display: inline }
+#rategroup11 { display: inline }
+#rateneed11  { display: none }
+#rategroupMy11 { display: none }
+#ratemy11      { display: inline }
+#rategroup12 { display: inline }
+#rateneed12  { display: none }
+#rategroupMy12 { display: none }
+#ratemy12      { display: inline }
+#rategroup13 { display: inline }
+#rateneed13  { display: none }
+#rategroupMy13 { display: none }
+#ratemy13      { display: inline }
+#rategroup14 { display: inline }
+#rateneed14  { display: none }
+#rategroupMy14 { display: none }
+#ratemy14      { display: inline }
+#rategroup15 { display: inline }
+#rateneed15  { display: none }
+#rategroupMy15 { display: none }
+#ratemy15      { display: inline }
+#rategroup16 { display: inline }
+#rateneed16  { display: none }
+#rategroupMy16 { display: none }
+#ratemy16      { display: inline }
+#rategroup17 { display: inline }
+#rateneed17  { display: none }
+#rategroupMy17 { display: none }
+#ratemy17      { display: inline }
+#rategroup18 { display: inline }
+#rateneed18  { display: none }
+#rategroupMy18 { display: none }
+#ratemy18      { display: inline }
+#rategroup19 { display: inline }
+#rateneed19  { display: none }
+#rategroupMy19 { display: none }
+#ratemy19      { display: inline }
+#rategroup20 { display: inline }
+#rateneed20  { display: none }
+#rategroupMy20 { display: none }
+#ratemy20      { display: inline }
+#rategroup21 { display: inline }
+#rateneed21  { display: none }
+#rategroupMy21 { display: none }
+#ratemy21      { display: inline }
+#rategroup22 { display: inline }
+#rateneed22  { display: none }
+#rategroupMy22 { display: none }
+#ratemy22      { display: inline }
+#rategroup23 { display: inline }
+#rateneed23  { display: none }
+#rategroupMy23 { display: none }
+#ratemy23      { display: inline }
+#rategroup24 { display: inline }
+#rateneed24  { display: none }
+#rategroupMy24 { display: none }
+#ratemy24      { display: inline }
+#rategroup25 { display: inline }
+#rateneed25  { display: none }
+#rategroupMy25 { display: none }
+#ratemy25      { display: inline }
+#rategroup26 { display: inline }
+#rateneed26  { display: none }
+#rategroupMy26 { display: none }
+#ratemy26      { display: inline }
+#rategroup27 { display: inline }
+#rateneed27  { display: none }
+#rategroupMy27 { display: none }
+#ratemy27      { display: inline }
+#rategroup28 { display: inline }
+#rateneed28  { display: none }
+#rategroupMy28 { display: none }
+#ratemy28      { display: inline }
+#rategroup29 { display: inline }
+#rateneed29  { display: none }
+#rategroupMy29 { display: none }
+#ratemy29      { display: inline }
+#rategroup30 { display: inline }
+#rateneed30  { display: none }
+#rategroupMy30 { display: none }
+#ratemy30      { display: inline }
+#rategroup31 { display: inline }
+#rateneed31  { display: none }
+#rategroupMy31 { display: none }
+#ratemy31      { display: inline }
+#rategroup32 { display: inline }
+#rateneed32  { display: none }
+#rategroupMy32 { display: none }
+#ratemy32      { display: inline }
+#rategroup33 { display: inline }
+#rateneed33  { display: none }
+#rategroupMy33 { display: none }
+#ratemy33      { display: inline }
+#rategroup34 { display: inline }
+#rateneed34  { display: none }
+#rategroupMy34 { display: none }
+#ratemy34      { display: inline }
+#rategroup35 { display: inline }
+#rateneed35  { display: none }
+#rategroupMy35 { display: none }
+#ratemy35      { display: inline }
+#rategroup36 { display: inline }
+#rateneed36  { display: none }
+#rategroupMy36 { display: none }
+#ratemy36      { display: inline }
+#rategroup37 { display: inline }
+#rateneed37  { display: none }
+#rategroupMy37 { display: none }
+#ratemy37      { display: inline }
+#rategroup38 { display: inline }
+#rateneed38  { display: none }
+#rategroupMy38 { display: none }
+#ratemy38      { display: inline }
+#rategroup39 { display: inline }
+#rateneed39  { display: none }
+#rategroupMy39 { display: none }
+#ratemy39      { display: inline }
+#rategroup40 { display: inline }
+#rateneed40  { display: none }
+#rategroupMy40 { display: none }
+#ratemy40      { display: inline }
+#rategroup41 { display: inline }
+#rateneed41  { display: none }
+#rategroupMy41 { display: none }
+#ratemy41      { display: inline }
+#rategroup42 { display: inline }
+#rateneed42  { display: none }
+#rategroupMy42 { display: none }
+#ratemy42      { display: inline }
+#rategroup43 { display: inline }
+#rateneed43  { display: none }
+#rategroupMy43 { display: none }
+#ratemy43      { display: inline }
+#rategroup44 { display: inline }
+#rateneed44  { display: none }
+#rategroupMy44 { display: none }
+#ratemy44      { display: inline }
+#rategroup45 { display: inline }
+#rateneed45  { display: none }
+#rategroupMy45 { display: none }
+#ratemy45      { display: inline }
+#rategroup46 { display: inline }
+#rateneed46  { display: none }
+#rategroupMy46 { display: none }
+#ratemy46      { display: inline }
+#rategroup47 { display: inline }
+#rateneed47  { display: none }
+#rategroupMy47 { display: none }
+#ratemy47      { display: inline }
+#rategroup48 { display: inline }
+#rateneed48  { display: none }
+#rategroupMy48 { display: none }
+#ratemy48      { display: inline }
+#rategroup49 { display: inline }
+#rateneed49  { display: none }
+#rategroupMy49 { display: none }
+#ratemy49      { display: inline }
+#rategroup50 { display: inline }
+#rateneed50  { display: none }
+#rategroupMy50 { display: none }
+#ratemy50      { display: inline }
+-->
+</style> 
+<!-- BEGIN BROWSE SCREEN LEFT CELL: BROWSELIST/BRIEFCIT AREA --> 
+<tr><td> 
+<table border="0" cellpadding="3" width="100%"> 
+<tr align="CENTER" valign="MIDDLE"> 
+<td colspan="5" class="browseSaveJump"> 
+<form method="POST" action="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/browse" name="export_form" id="export_form" > 
+<input type="hidden" name="jumpref" value="Xcancer"> 
+<input type="hidden" id="save_func" name="save_func" value=""/> 
+<a href="#" onclick="process_save(0);" style="text-decoration:none"> 
+<input type="submit" value="Save Marked Records" class="browseSaveJump" onclick="return false"></a> 
+<span name='save_page_btn1' id='save_page_btn1' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none"> 
+<input type="submit" value="Save All On Page" ></a> 
+</span> 
+</td></tr> 
+ 
+ 
+</td> 
+</tr> 
+<tr  class="browseHeader"> 
+<td align="center" class="browseHeaderData"> 
+KEYWORDS (1-50 of 1037)
+</td> 
+</tr> 
+<!-- Right Result rank 1 --> 
+<tr  class="browseSuperEntry browseEntryRelGroup1"><td colspan="1"><img src="/screens/relevance5.gif" alt="">&nbsp;Most relevant titles&nbsp;entries 1-678</td></tr> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+1        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1069678" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&1%2C1%2C">Pharmaceutical perspectives of cancer therapeutics</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QV 269 P536L 2009          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2009        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+2        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1053910" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&2%2C2%2C">Molecular profile of women with and without secondary breast cancer the treatment of pediatric hodgkin lymphoma</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Mandrell, Belinda Neal.            </span> 
+          </p> 
+          <p>          
+INTERNET          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/online.png" alt="COMPUTER FILE">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2008        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+3        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1051439" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&3%2C3%2C">The biology of cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Weinberg, Robert A. (Robert Allan), 1942-            </span> 
+          </p> 
+          <p>          
+QZ 202 W423b 2007          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2007        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+4        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1053394" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&4%2C4%2C">Cancer reviews online</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+INTERNET          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/online.png" alt="COMPUTER FILE">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2007-        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+5        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1053831" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&5%2C5%2C">Uncovering p53 mutations and abnormal gene expression in pediatric adrenocortical cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+West, Alina Nico, 1976-            </span> 
+          </p> 
+          <p>          
+INTERNET          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINT MS">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2007        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+6        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050250" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&6%2C6%2C">Cancer chemotherapy and biotherapy : principles and practice</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 267 C21515 2006          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2006        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+7        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050508" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&7%2C7%2C">Cancer and the heart</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Ewer, Michael S.            </span> 
+          </p> 
+          <p>          
+WG 200 E94c 2006          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2006        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+8        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050689" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&8%2C8%2C">From cancer patient to cancer survivor : lost in transition</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 266 F931 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2006        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+9        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1051035" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&9%2C9%2C">100 preguntas y respuestas sobre los cuidados a los familiares o amigos con c‡ncer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Rose, Susannah.            </span> 
+          </p> 
+          <p>          
+QZ 266 R797p 2006          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2006        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+10        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1051368" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&10%2C10%2C">The Gale encyclopedia of cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+INTERNET          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/online.png" alt="COMPUTER FILE">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2006        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+11        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049991" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&11%2C11%2C">Cancer gene therapy</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 266 C21433 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+12        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049997" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&12%2C12%2C">Combination cancer therapy : modulators and potentiators</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 267 C731 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+13        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050080" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&13%2C13%2C">Cancer : principles & practice of oncology</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 200 C21537 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+14        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050104" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&14%2C14%2C">Breast cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WP 870 B821135 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+15        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050283" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&15%2C15%2C">The NPY family of peptides in immune disorders, inflammation, angiogenesis and cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WL 104 N961 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+16        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050327" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&16%2C16%2C">Cancer nursing : principles and practice</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WY 156 C2197 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+17        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050617" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&17%2C17%2C">The cancer recovery plan : maximize your cancer treatment with this proven nutrition, exercise, and stress-reduction program</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Boyd, D. Barry.            </span> 
+          </p> 
+          <p>          
+QZ 266 B789c 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+18        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050618" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&18%2C18%2C">Breast cancer answers : understanding and fighting breast cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Feinberg, Bruce A.            </span> 
+          </p> 
+          <p>          
+WP 870 F299b 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+19        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050629" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&19%2C19%2C">The breast cancer book : what you need to know to make informed decisions</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Grobstein, Ruth H.            </span> 
+          </p> 
+          <p>          
+WP 870 G873b 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+20        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050632" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&20%2C20%2C">The complete cancer survival guide : the most comprehensive, up-to-date guide for patients and their families ; with advice from dozens of leading cancer specialists at more than 30 major cancer centers</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Teeley, Peter.            </span> 
+          </p> 
+          <p>          
+QZ 201 T258c 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+21        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1051041" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&21%2C21%2C">100 questions & answers about caring for family or friends with cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Rose, Susannah.            </span> 
+          </p> 
+          <p>          
+QZ 266 R797 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+22        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1054115" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&22%2C22%2C">Design and synthesis of novel antioxidants and anti-cancer agents</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Kirichenko, Viktorovich, 1968-            </span> 
+          </p> 
+          <p>          
+QV 709 K58d 2005          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+23        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1051356" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&23%2C23%2C">Cancer informatics</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+INTERNET          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/online.png" alt="COMPUTER FILE">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2005        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+24        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048035" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&24%2C24%2C">Inherited cancer syndromes : current clinical management</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 200 I4384 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+25        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048581" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&25%2C25%2C">Head and neck cancer : a multidisciplinary approach</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WE 707 H431724 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+26        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049002" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&26%2C26%2C">Cancer and inflammation</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 200 C215053 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+27        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049669" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&27%2C27%2C">Cancer cell culture : methods and protocols</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 25 C215 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+28        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049993" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&28%2C28%2C">The complete guide to relieving cancer pain and suffering</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Patt, Richard B.            </span> 
+          </p> 
+          <p>          
+QZ 201 P315c 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+29        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050039" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&29%2C29%2C">Handbook of cancer-related fatigue</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Patarca-Montero, Roberto.            </span> 
+          </p> 
+          <p>          
+QZ 200 P294h 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+30        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1051545" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&30%2C30%2C">Progress in cancer pathobiology and transplantation immunobiology</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Yoshiki, Takashi.            </span> 
+          </p> 
+          <p>          
+QZ 200 Y65p 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+31        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048986" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&31%2C31%2C">Early postoperative enteral feeding in patients with gastrointestinal cancer: description of length of stay, serum albumin and prealbumin.</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Hildebrand-Davis, Cynthia L.            </span> 
+          </p> 
+          <p>          
+WY 9 H642 2004          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINT MS">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2004        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+32        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048560" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&32%2C32%2C">World cancer report</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 200 W9269 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+33        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048578" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&33%2C33%2C">Cancer pain : assessment and management</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 266 C21622 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+34        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048579" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&34%2C34%2C">The cancer chemotherapy handbook</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 39 C2147 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+35        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048580" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&35%2C35%2C">Handbook of cancer chemotherapy</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 267 H236 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+36        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048582" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&36%2C36%2C">Cancer of the head and neck</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WE 707 C215 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+37        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048586" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&37%2C37%2C">Cancer medicine 6</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 200 C21536 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+38        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049041" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&38%2C38%2C">Chemoradiation in cancer therapy</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 266 C5174 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+39        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1049995" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&39%2C39%2C">Exercise and cancer recovery</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Schneider, Carole M.            </span> 
+          </p> 
+          <p>          
+QZ 266 S358e 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+40        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1047949" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&40%2C40%2C">Cancer science.</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+PRINT+ONLINE        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2003-        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+41        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1047215" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&41%2C41%2C">Functional MRI techniques to investigate cognitive deficits in childhood cancer survivors</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Zou, Ping.            </span> 
+          </p> 
+          <p>          
+QT 9 Z91f 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINT MS">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2003        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+42        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1046571" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&42%2C42%2C">Endocrine therapy of breast cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WP 870 E5581 2002          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+43        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1046609" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&43%2C43%2C">Lung cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Ginsberg, Robert J.            </span> 
+          </p> 
+          <p>          
+WF 658 G493L 2002          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+44        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1046710" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&44%2C44%2C">Prostate cancer : principles and practice</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+WJ 752 P9655352 2002          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+45        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1046847" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&45%2C45%2C">AJCC cancer staging manual</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 241 A312 2002          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+46        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1046962" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&46%2C46%2C">Atlas of cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 17 A8801 2002          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+47        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1047119" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&47%2C47%2C">United States cancer statistics 1999 incidence</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+INTERNET          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/online.png" alt="COMPUTER FILE">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+48        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1048311" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&48%2C48%2C">Everyone's guide to cancer therapy : how cancer is diagnosed, treated, and managed day to day</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+QZ 201 E93 2003          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+49        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1050053" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&49%2C49%2C">Understanding colon cancer</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+Adrouny, A. Richard, 1952-            </span> 
+          </p> 
+          <p>          
+WI 529 A243u 2002          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+ <img src="/screens/images/media/book.png" alt="PRINTED MATL">        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2002        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<!-- briefcit.html --> 
+<!-- 2006 WebPAC Pro Version, set from 26 March, 2007 --> 
+ 
+<tr> 
+  <td class="briefCitRow"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="briefCiteRowData"> 
+      <tr> 
+        <td width="5%" rowspan="2" align="center" class="briefcitEntry" valign="middle" style="vertical-align: middle;"> 
+50        </td> 
+        <td width="10%" rowspan="2" align="center" class="briefcitEntryMark" style="vertical-align: middle;"> 
+<input type="checkbox" 
+name="save" value="b1046926" > 
+        </td> 
+        <td width="60%" align="left" class="briefcitDetail"> 
+<!--{nohitmsg}--> 
+          <p> 
+            <span class="briefcitTitle"> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/frameset&FF=Xcancer&SORT=D&50%2C50%2C">Cancer cell.</a>            </span> &mdash; 
+            <span class="briefcitAuthor"> 
+            </span> 
+          </p> 
+          <p>          
+          </p> 
+        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitMediaType" style="vertical-align: middle;"> 
+PRINT+ONLINE        </td> 
+        <td width="10%" align="center" rowspan="2" class="briefcitYear" style="vertical-align: middle;"> 
+c2002-        </td> 
+      </tr>      
+      <!--<tr>
+        <td>
+{items}
+        </td>
+      </tr>--> 
+    </table> 
+  </td> 
+</tr> 
+<!--this is customized <screens/briefcit.html>--> 
+<tr align="CENTER" valign="MIDDLE"> 
+<td colspan="5" class="browseSaveJump"> 
+<a href="#" onclick="process_save(0);" style="text-decoration:none"> 
+<input type="submit" value="Save Marked Records" class="browseSaveJump" onclick="return false"></a> 
+<span name='save_page_btn2' id='save_page_btn2' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none"> 
+<input type="submit" value="Save All On Page" ></a> 
+</span> 
+</FORM> 
+ 
+<form action="/search~S2/X?cancer&SORT=D" method="POST"> 
+<input type="HIDDEN" name="jumpref" value="Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/browse"> 
+<input type="SUBMIT" value="Locate In Results" class="browseSaveJump"> 
+<input type="TEXT" name="jumpto" value="1037" size="4" maxlength="4"> 
+</form> 
+ 
+</td></tr> 
+ 
+ 
+</td> 
+</tr> 
+</table> 
+<!-- END BROWSELIST/BRIEFCIT AREA --> 
+</td> 
+<!-- END BROWSE SCREEN LEFT CELL --> 
+ 
+</tr> 
+ 
+<!-- BEGIN BOTTOM BROWSE PAGER --> 
+<!-- begin page widgit --> 
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5"> 
+ 
+Result Page&nbsp;&nbsp;&nbsp;<strong>1</strong> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/51%2C1037%2C1037%2CB/browse">2</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/101%2C1037%2C1037%2CB/browse">3</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/151%2C1037%2C1037%2CB/browse">4</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/201%2C1037%2C1037%2CB/browse">5</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/251%2C1037%2C1037%2CB/browse">6</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/301%2C1037%2C1037%2CB/browse">7</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/351%2C1037%2C1037%2CB/browse">8</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/401%2C1037%2C1037%2CB/browse">9</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/451%2C1037%2C1037%2CB/browse">10</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/501%2C1037%2C1037%2CB/browse">11</a> 
+...
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1001%2C1037%2C1037%2CB/browse">21</a> 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/51%2C1037%2C1037%2CB/browse">Next Record</a> 
+<!-- end page widgit --> 
+</td> 
+</tr> 
+<!-- END BOTTOM BROWSE PAGER --> 
+</table> 
+<!-- END BROWSE SCREEN TABLE --> 
+<div align="center" class="navigationRow"> 
+<form> 
+<a href="/">Start Over</a> 
+<a href="/search~S2/X?NOSRCH=cancer&SORT=D&SUBKEY=cancer"><img src="/screens/modify.gif" alt="Modify Search" border="0" /></a> 
+ 
+<a href="/search~S2?/Xcancer&SORT=D/Xcancer&SORT=D&SUBKEY=cancer/1%2C1037%2C1037%2CB/webaddress0"><img src="/screens/moreinfo.gif" border="0" alt="More Information" /></a> 
+<a href="/search~S2/X"><img src="/screens/another.gif" alt="Another Search" border="0" /></a> 
+<select name=HISTORY onChange="onSelectChange(this, '~S2')"><option value="">(Search History)</option> 
+<OPTION VALUE="Xcancer&SORT=D&searchscope=2">KEYWORD: cancer in UTHSC
+<OPTION VALUE="Xcancer&SORT=DZ&searchscope=2">KEYWORD: cancer in UTHSC
+<OPTION VALUE="Xcancer&searchscope=2&SORT=DZ">KEYWORD: cancer in UTHSC
+<option value="+/search~S2/X?cancer&SORT=D&clear_history">(Clear Search History)</option> 
+<option value="+/">(End Search Session)</option> 
+</select> 
+</form> 
+</div> 
+ 
+<!-- begin botlogo.html file --> 
+<!-- This file last changed: 23 September, 2009 --> 
+</div> <!-- main-content --> 
+</div></div><!-- content -->	
+ 
+<div id="footer"><div id="footer_inner"> 
+<img src="http://www.uthsc.edu/images/footer_icon.gif" alt="UT logo" /> 
+<p>&#169; 2007 <a href="http://library.uthsc.edu/">The University of Tennessee Health Sciences Library and 
+  Biocommunications Center</a></p> 
+<p>877 Madison Ave., Memphis, Tennessee 38163 &middot; 901-448-5634</p> 
+<p> 
+	<a href="http://library.uthsc.edu/">Library Homepage</a> |
+	<a href="http://library.uthsc.edu/reference/askalibrarian">Contact the Library</a> | 
+	<a href="mailto:webmaster@library.uthsc.edu">Library Webmaster</a> 
+</p> 
+</div></div><!-- footer --> 
+</div> 
+ 
+<script type="text/javascript" charset="utf-8" src="/screens/js/jquery-1.2.3.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="/screens/js/ut.js"></script> 
+ 
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-168455-8");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+<!-- end botlogo.html file --> 
+</body> 
+</html>

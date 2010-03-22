@@ -1,0 +1,1272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<title>Health Sciences Library & Biocommunications Center                       /UTHSC</title> 
+<base target="_self"/> 
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" /> 
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" /> 
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" /> 
+<script language="JavaScript" type="text/javascript" src="/scripts/common.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/scripts/features.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/scripts/webbridge.js"></script> 
+ 
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!--[if lte IE 7]><link rel="stylesheet" media="all" type="text/css" href="/screens/styles.ie.css" /><![endif]--> 
+</head> 
+<body bgcolor="#FFFFFF" > 
+<!-- begin toplogo.html file --> 
+<!-- This file last changed: 12 February, 2008 --> 
+<div id="sanity-wrap"> 
+<div id="header"> 
+	<h1><a href="http://www.uthsc.edu/">The University of Tennessee Health Science Center</a></h1>				
+	<h2>UTHSC Library</h2> 
+	<ul>	
+		<li><a href="https://exchange.uthsc.edu">Exchange Mail</a></li> 
+	  	<li><a href="http://courses.uthsc.edu">Blackboard</a></li> 
+	  	<li><a href="http://login.uthsc.edu">iLogin</a></li> 
+	   	<li><a href="http://utap.tennessee.edu">MyUT</a></li> 
+		<li class="last"> 
+			<form action="http://www.uthsc.edu/search/query.php" method="post" accept-charset="utf-8">					
+	      	<label for="some_name">Enter Search Items</label> 
+	        <input type="text" name="query" onfocus="this.value=''" value="Enter Search Items" id="some_name" class="text" />		         
+	        <label for="select_search">Select Search Option</label> 
+	        <select size="1" name="col" id="select_search"> 
+	        	<option value="utmem">Campus</option> 
+	         	<option value="ldap" selected="selected">People</option> 
+	         	<option value="utk utmem utm utc utsi utsa utia utips">System</option> 
+	        </select> 
+	        <input type="submit" value="Go" class="button" />		      
+	    	</form> 
+ 			</li> 
+ 		</ul>			
+</div> <!-- header --> 
+ 
+<div id="department"><div id="department_inner"> 
+	<div id="department_name"> 
+		<a href="http://opac.uthsc.edu/search">Library Catalog</a> 
+	</div><!-- department_name --> 
+	
+	<div id="crumbs"> 
+       <div id="department_crumbs"> 
+           <a href="http://library.uthsc.edu/" title="Go to library homepage">Home</a> 
+           <img src="http://library.uthsc.edu/wp-content/themes/utbase/images/arrow_mini_right.gif" alt=""> 
+           Catalog
+       </div> 
+    </div> 
+</div></div><!-- department --> 
+ 
+<div id="content"><div id="content_inner"> 
+	<div id="main_nav" class="no_content"></div> <!-- main_nav --> 
+	
+	<div id="main_content" class="full_page_width">	    
+<!--end toplogo.html--> 
+ 
+ 
+<div align="center" class="navigationRow"> 
+<form> 
+<a href="/">Start Over</a> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CE/2browse"><img src="/screens/extended.gif" alt="Extended Display" border="0" /></a> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1,35,44,B/limit:relimit"><img src="/screens/limit.gif" alt="Limit/Sort" border="0" /></a> 
+<a href="/search~S2/X?organic+chemistry&SORT=D&searchscope=2"><img src="/screens/wordsrch.gif" alt="Word Search" border="0" /></a> 
+ 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/webaddress0"><img src="/screens/moreinfo.gif" border="0" alt="More Information" /></a> 
+<a href="/search~S2/t"><img src="/screens/another.gif" alt="Another Search" border="0" /></a> 
+<select name=HISTORY onChange="onSelectChange(this, '~S2')"><option value="">(Search History)</option> 
+<OPTION VALUE="torganic+chemistry&searchscope=2">TITLE: organic chemistry in UTHSC
+<OPTION VALUE="torganic+chemistry&extended=0&searchscope=2">TITLE: organic chemistry in UTHSC
+<option value="+/search~S2/t?organic+chemistry&clear_history">(Clear Search History)</option> 
+<option value="+/">(End Search Session)</option> 
+</select> 
+<noscript> 
+<h2>Search history function requires JavaScript</h2> 
+</noscript> 
+</form> 
+</div> 
+ 
+<!-- BEGIN BROWSE SCREEN TABLE --> 
+<table width="100%" cellpadding="2" cellspacing="0" border="0" class="browseScreen"> 
+<!-- BEGIN SEARCH WIDGET --> 
+<div align="center"> 
+<tr align="center" valign="middle"> 
+<td valign="middle" colspan="2"> 
+<div  class="browseSearchtool"> 
+<script language="JavaScript" type="text/JavaScript"> 
+<!-- Hide the JS
+var savedTag;
+var savedSearch;
+var savedExactSearch = null; 
+ 
+var savedScope
+var sortButtonText ="Sort"
+;var sortButtonEvent = "sortBrowse";
+var sortTypes = new Array();
+var sortLabels = new Array();
+sortTypes[0] = "t";
+sortLabels[0] = "Title";
+sortTypes[1] = "a";
+sortLabels[1] = "Author";
+sortTypes[2] = "c";
+sortLabels[2] = "Year";
+sortTypes[3] = "r";
+sortLabels[3] = "Reverse Year";
+sortTypes[4] = "n";
+sortLabels[4] = "Call Number";
+sortTypes[5] = "m";
+sortLabels[5] = "Material Type";
+sortLabels[6] = "System Sorted";
+sortTypes[6] = "-";
+var sortSelectedValue = "6";
+var sortExactBrowseURL = "/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/browse"
+var nonSortTags = "XYZprWw"
+// Unhide the JS -->
+</script> 
+<form name="searchtool" target="_self" action="/search~S2/"> 
+      <select name="searchtype" id="searchtype" onChange="initSort()"> 
+        <option value="X"> KEYWORD</option> 
+        <option value="a"> AUTHOR</option> 
+        <option value="t" selected="selected"> TITLE</option> 
+        <option value="d"> SUBJECT</option> 
+        <option value="c"> CALL NO</option> 
+      </select> 
+      &nbsp;
+      <input type="text" name="searcharg" size="30" maxlength="75" value="organic chemistry" /> 
+      &nbsp;
+ 
+<span id="sort_cell"> 
+</span> 
+ 
+<script language="JavaScript" type="text/JavaScript"> 
+<!-- Hide the JS
+initSort();
+// Unhide the JS -->
+</script> 
+      <input type="hidden" name="SORT" value="D" /><input type="hidden" name="extended" value="0" /><input type="submit" name="SUBMIT" value="Search" /> 
+<div> 
+      <input type="checkbox" name="availlim" value="1"  /> <span class="availLimMessage">Limit search to available items</span><br/> 
+</div> 
+<div> 
+      <input type="hidden" name="searchlimits" value="" /> 
+      <input type="hidden" name="searchorigarg" value="torganic chemistry" /> 
+</div> 
+</form> 
+<div></div></div> 
+ 
+</td> 
+</tr> 
+</div> 
+<!-- END SEARCH WIDGET --> 
+ 
+<!-- BEGIN BROWSE PAGER --> 
+<!-- END BROWSE PAGER --> 
+ 
+<style type="text/css"> 
+<!--
+#rategroup1 { display: inline }
+#rateneed1  { display: none }
+#rategroupMy1 { display: none }
+#ratemy1      { display: inline }
+#rategroup2 { display: inline }
+#rateneed2  { display: none }
+#rategroupMy2 { display: none }
+#ratemy2      { display: inline }
+#rategroup3 { display: inline }
+#rateneed3  { display: none }
+#rategroupMy3 { display: none }
+#ratemy3      { display: inline }
+#rategroup4 { display: inline }
+#rateneed4  { display: none }
+#rategroupMy4 { display: none }
+#ratemy4      { display: inline }
+#rategroup5 { display: inline }
+#rateneed5  { display: none }
+#rategroupMy5 { display: none }
+#ratemy5      { display: inline }
+#rategroup6 { display: inline }
+#rateneed6  { display: none }
+#rategroupMy6 { display: none }
+#ratemy6      { display: inline }
+#rategroup7 { display: inline }
+#rateneed7  { display: none }
+#rategroupMy7 { display: none }
+#ratemy7      { display: inline }
+#rategroup8 { display: inline }
+#rateneed8  { display: none }
+#rategroupMy8 { display: none }
+#ratemy8      { display: inline }
+#rategroup9 { display: inline }
+#rateneed9  { display: none }
+#rategroupMy9 { display: none }
+#ratemy9      { display: inline }
+#rategroup10 { display: inline }
+#rateneed10  { display: none }
+#rategroupMy10 { display: none }
+#ratemy10      { display: inline }
+#rategroup11 { display: inline }
+#rateneed11  { display: none }
+#rategroupMy11 { display: none }
+#ratemy11      { display: inline }
+#rategroup12 { display: inline }
+#rateneed12  { display: none }
+#rategroupMy12 { display: none }
+#ratemy12      { display: inline }
+#rategroup13 { display: inline }
+#rateneed13  { display: none }
+#rategroupMy13 { display: none }
+#ratemy13      { display: inline }
+#rategroup14 { display: inline }
+#rateneed14  { display: none }
+#rategroupMy14 { display: none }
+#ratemy14      { display: inline }
+#rategroup15 { display: inline }
+#rateneed15  { display: none }
+#rategroupMy15 { display: none }
+#ratemy15      { display: inline }
+#rategroup16 { display: inline }
+#rateneed16  { display: none }
+#rategroupMy16 { display: none }
+#ratemy16      { display: inline }
+#rategroup17 { display: inline }
+#rateneed17  { display: none }
+#rategroupMy17 { display: none }
+#ratemy17      { display: inline }
+#rategroup18 { display: inline }
+#rateneed18  { display: none }
+#rategroupMy18 { display: none }
+#ratemy18      { display: inline }
+#rategroup19 { display: inline }
+#rateneed19  { display: none }
+#rategroupMy19 { display: none }
+#ratemy19      { display: inline }
+#rategroup20 { display: inline }
+#rateneed20  { display: none }
+#rategroupMy20 { display: none }
+#ratemy20      { display: inline }
+#rategroup21 { display: inline }
+#rateneed21  { display: none }
+#rategroupMy21 { display: none }
+#ratemy21      { display: inline }
+#rategroup22 { display: inline }
+#rateneed22  { display: none }
+#rategroupMy22 { display: none }
+#ratemy22      { display: inline }
+#rategroup23 { display: inline }
+#rateneed23  { display: none }
+#rategroupMy23 { display: none }
+#ratemy23      { display: inline }
+#rategroup24 { display: inline }
+#rateneed24  { display: none }
+#rategroupMy24 { display: none }
+#ratemy24      { display: inline }
+#rategroup25 { display: inline }
+#rateneed25  { display: none }
+#rategroupMy25 { display: none }
+#ratemy25      { display: inline }
+#rategroup26 { display: inline }
+#rateneed26  { display: none }
+#rategroupMy26 { display: none }
+#ratemy26      { display: inline }
+#rategroup27 { display: inline }
+#rateneed27  { display: none }
+#rategroupMy27 { display: none }
+#ratemy27      { display: inline }
+#rategroup28 { display: inline }
+#rateneed28  { display: none }
+#rategroupMy28 { display: none }
+#ratemy28      { display: inline }
+#rategroup29 { display: inline }
+#rateneed29  { display: none }
+#rategroupMy29 { display: none }
+#ratemy29      { display: inline }
+#rategroup30 { display: inline }
+#rateneed30  { display: none }
+#rategroupMy30 { display: none }
+#ratemy30      { display: inline }
+#rategroup31 { display: inline }
+#rateneed31  { display: none }
+#rategroupMy31 { display: none }
+#ratemy31      { display: inline }
+#rategroup32 { display: inline }
+#rateneed32  { display: none }
+#rategroupMy32 { display: none }
+#ratemy32      { display: inline }
+#rategroup33 { display: inline }
+#rateneed33  { display: none }
+#rategroupMy33 { display: none }
+#ratemy33      { display: inline }
+#rategroup34 { display: inline }
+#rateneed34  { display: none }
+#rategroupMy34 { display: none }
+#ratemy34      { display: inline }
+#rategroup35 { display: inline }
+#rateneed35  { display: none }
+#rategroupMy35 { display: none }
+#ratemy35      { display: inline }
+-->
+</style> 
+<!-- BEGIN BROWSE SCREEN LEFT CELL: BROWSELIST/BRIEFCIT AREA --> 
+<tr><td> 
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="browseList"> 
+<tr align="CENTER" valign="MIDDLE"> 
+<td colspan="5" class="browseSaveJump"> 
+<form method="POST" action="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/browse" name="export_form" id="export_form" > 
+<input type="hidden" name="jumpref" value="torganic+chemistry"> 
+<input type="hidden" id="save_func" name="save_func" value=""/> 
+<a href="#" onclick="process_save(0);" style="text-decoration:none"> 
+<input type="submit" value="Save Marked Records" class="browseSaveJump" onclick="return false"></a> 
+<span name='save_page_btn1' id='save_page_btn1' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none"> 
+<input type="submit" value="Save All On Page" ></a> 
+</span> 
+</td></tr> 
+ 
+ 
+</td> 
+</tr> 
+<tr  class="browseHeader"> 
+<td align="center" valign="bottom" class="browseHeaderNum"> 
+Num
+</td> 
+ 
+<td align="center" valign="bottom" class="browseHeaderMark"> 
+Mark
+</td> 
+ 
+<td align="center" class="browseHeaderData"> 
+TITLES (1-35 of 35)
+</td> 
+<td align="left" valign="bottom" class="browseHeaderYear"> 
+Year
+</td> 
+ 
+<td align="center" valign="bottom" class="browseHeaderEntries"> 
+Entries<br /> 44 Found
+</td> 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+1
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry|6"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/exact&FF=torganic+chemistry&1%2C6%2C">Organic Chemistry</a> 
+</td> 
+<td class="browseEntryYear">&nbsp;</td> 
+<td align="right" class="browseEntryEntries"> 
+6
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+2
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry a brief survey of concepts and applications|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+a+brief+survey+of+concepts+and+applications&1%2C1%2C">Organic Chemistry : A Brief Survey Of Concepts And Applications</a>  : Bailey, Philip S.; QD 251.2 B155o 2000
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c2000
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+3
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry a short course|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+a+short+course&1%2C1%2C">Organic Chemistry : A Short Course</a>  : Hart, Harold,; QD 251.2 H323o 1991
+; <strong> 
+LIB USE ONLY</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c1991
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+4
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry and biochemistry|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+and+biochemistry&1%2C1%2C">Organic Chemistry And Biochemistry</a>  : <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+&nbsp;
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+5
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry in pharmacy|4"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/exact&FF=torganic+chemistry+in+pharmacy&1%2C4%2C">Organic Chemistry In Pharmacy.</a> 
+</td> 
+<td class="browseEntryYear">&nbsp;</td> 
+<td align="right" class="browseEntryEntries"> 
+4
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+6
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry in the united states 1875 1955|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+in+the+united+states+1875+1955&1%2C1%2C">Organic Chemistry In The United States, 1875-1955</a>  : Tarbell, D. Stanley,; QD 248.5 .U6 T179e 1986
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c1986
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+7
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry monograph series|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+monograph+series&1%2C1%2C">Organic Chemistry Monograph Series.</a>  : Breslow, Ronald.; QD 476 B842o 1965
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1965
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+8
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    1|2"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/exact&FF=torganic+chemistry+new+york+n+y+v++++1&1%2C2%2C">Organic Chemistry (New York, N.Y.) &#59;</a> 
+</td> 
+<td class="browseEntryYear">&nbsp;</td> 
+<td align="right" class="browseEntryEntries"> 
+2
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+9
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    2|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++2&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Smith, Brandes H.; QD 331 S643b 1964
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1964
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+10
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    3|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++3&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Hanack, Michael.; QD 481 H232c 1965
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1965
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+11
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    4|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++4&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Cram, Donald J.; QD 305 .C3 C889f 1965
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1965
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+12
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    5|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++5&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : QD 281 .09 O98 pt.A
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1982
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+13
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    6|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++6&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Hudson, R. F.; QD 412 .P1 H886s 1965
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1965
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+14
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    7|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++7&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Johnson, A. William; QD 561 J66y 1966
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1966
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+15
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    8|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++8&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Hamer, Jan.; QD 400 H214c 1967
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1967
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+16
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v    9|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v++++9&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Ulrich, Henri,; QD 305 .H7 U45c 1967
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1967
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+17
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   10|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++10&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Cava, M. P.; QD 341 .H9 C376c 1967
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1967
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+18
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   11|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++11&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Hoffmann, Reinhard W.; QD 341 .H9 H711d 1967
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c1967
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+19
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   12|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++12&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Sandler, Stanley R.,; QD 262 S217o
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1968-
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+20
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   13   13b    1   13b    2|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++13+++13b++++1+++13b++++2&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Cotter, Robert J.,; QD 281 .P6 C847r
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1969-
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+21
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   14|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++14&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : DeWolfe, Robert H.; QD 305 .A2 D524c 1970
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1970
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+22
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   15|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++15&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Foster, R.; QD 474 F757o 1969
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1969
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+23
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   16 etc|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++16+etc&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : QD 331 N812
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1969-
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+24
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   17|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++17&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Rochester, Colin H.; QD 477 R676a 1970
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1970
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+25
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   18|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++18&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Sundberg, Richard J.,; QD 401 S957c 1970
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1970
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+26
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   19|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++19&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Katritzky, Alan R.; QD 401 K19c 1971
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1971
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+27
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   20|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++20&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : QD 305 .N7 I85 1971
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1971
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+28
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   21|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++21&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : International Symposium on Conformational Analysis; QD 481 I61c 1969
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1971
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+29
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   22|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++22&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Schill, Gottfried.; QD 471 S334c 1971
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1971
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+30
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry new york n y v   30|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+new+york+n+y+v+++30&1%2C1%2C">Organic Chemistry (New York, N.Y.) &#59;</a>  : Blickenstaff, Robert T.; WK 150 B648t 1974
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1974
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+31
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry of drug design and drug action|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+of+drug+design+and+drug+action&1%2C1%2C">The Organic Chemistry Of Drug Design And Drug Action</a>  : Silverman, Richard B.; QV 744 S587o 1992
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c1992
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+32
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry of drug synthesis|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+of+drug+synthesis&1%2C1%2C">The Organic Chemistry Of Drug Synthesis</a>  : Lednicer, Daniel,; QV 744 L473o
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+1980
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+33
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry of metabolism|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+of+metabolism&1%2C1%2C">Organic Chemistry Of Metabolism</a>  : Brown, William Henry,; QD 253 B881i 2002
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c2002
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+34
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry of sulfur|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+of+sulfur&1%2C1%2C">Organic Chemistry Of Sulfur</a>  : QD 412 .S1 O68 1977
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c1977
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr  class="browseEntry"> 
+<td align="right" class="browseEntryNum"> 
+35
+</td> 
+ 
+ 
+<td align="center" rowspan="1" class="browseEntryMark"> 
+<input type="checkbox" 
+name="savegroup" value="torganic chemistry structure and function|1"> 
+</td> 
+<td class="browseEntryData"> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/frameset&FF=torganic+chemistry+structure+and+function&1%2C1%2C">Organic Chemistry : Structure And Function</a>  : Vollhardt, K. Peter C.; QD 251.3 V899o 2003
+; <strong> 
+AVAILABLE</strong> 
+&nbsp;
+ 
+</td> 
+<td align="left" valign="top" rowspan="1" class="browseEntryYear"> 
+c2003
+</td> 
+<td align="right" class="browseEntryEntries"> 
+1
+</td> 
+ 
+</tr> 
+<tr align="CENTER" valign="MIDDLE"> 
+<td colspan="5" class="browseSaveJump"> 
+<a href="#" onclick="process_save(0);" style="text-decoration:none"> 
+<input type="submit" value="Save Marked Records" class="browseSaveJump" onclick="return false"></a> 
+<span name='save_page_btn2' id='save_page_btn2' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none"> 
+<input type="submit" value="Save All On Page" ></a> 
+</span> 
+</FORM> 
+</td></tr> 
+ 
+ 
+</td> 
+</tr> 
+</table> 
+<!-- END BROWSELIST/BRIEFCIT AREA --> 
+</td> 
+<!-- END BROWSE SCREEN LEFT CELL --> 
+ 
+</tr> 
+ 
+<!-- BEGIN BOTTOM BROWSE PAGER --> 
+<!-- END BOTTOM BROWSE PAGER --> 
+</table> 
+<!-- END BROWSE SCREEN TABLE --> 
+<div align="center" class="navigationRow"> 
+<form> 
+<a href="/">Start Over</a> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CE/2browse"><img src="/screens/extended.gif" alt="Extended Display" border="0" /></a> 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1,35,44,B/limit:relimit"><img src="/screens/limit.gif" alt="Limit/Sort" border="0" /></a> 
+<a href="/search~S2/X?organic+chemistry&SORT=D&searchscope=2"><img src="/screens/wordsrch.gif" alt="Word Search" border="0" /></a> 
+ 
+<a href="/search~S2?/torganic+chemistry/torganic+chemistry/1%2C35%2C44%2CB/webaddress0"><img src="/screens/moreinfo.gif" border="0" alt="More Information" /></a> 
+<a href="/search~S2/t"><img src="/screens/another.gif" alt="Another Search" border="0" /></a> 
+<select name=HISTORY onChange="onSelectChange(this, '~S2')"><option value="">(Search History)</option> 
+<OPTION VALUE="torganic+chemistry&searchscope=2">TITLE: organic chemistry in UTHSC
+<OPTION VALUE="torganic+chemistry&extended=0&searchscope=2">TITLE: organic chemistry in UTHSC
+<option value="+/search~S2/t?organic+chemistry&clear_history">(Clear Search History)</option> 
+<option value="+/">(End Search Session)</option> 
+</select> 
+</form> 
+</div> 
+ 
+<!-- begin botlogo.html file --> 
+<!-- This file last changed: 23 September, 2009 --> 
+</div> <!-- main-content --> 
+</div></div><!-- content -->	
+ 
+<div id="footer"><div id="footer_inner"> 
+<img src="http://www.uthsc.edu/images/footer_icon.gif" alt="UT logo" /> 
+<p>&#169; 2007 <a href="http://library.uthsc.edu/">The University of Tennessee Health Sciences Library and 
+  Biocommunications Center</a></p> 
+<p>877 Madison Ave., Memphis, Tennessee 38163 &middot; 901-448-5634</p> 
+<p> 
+	<a href="http://library.uthsc.edu/">Library Homepage</a> |
+	<a href="http://library.uthsc.edu/reference/askalibrarian">Contact the Library</a> | 
+	<a href="mailto:webmaster@library.uthsc.edu">Library Webmaster</a> 
+</p> 
+</div></div><!-- footer --> 
+</div> 
+ 
+<script type="text/javascript" charset="utf-8" src="/screens/js/jquery-1.2.3.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="/screens/js/ut.js"></script> 
+ 
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-168455-8");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+<!-- end botlogo.html file --> 
+</body> 
+</html>

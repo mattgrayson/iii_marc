@@ -9,8 +9,9 @@ module MARC
     attr_accessor :base_uri, :record_uri, :marc_uri
     attr_reader :coder
     
-    def initialize(opac_uri)
-      @entities = HTMLEntities.new      
+    def initialize(opac_uri, scope='')
+      @entities = HTMLEntities.new
+      @scope = scope
       self.class.base_uri(opac_uri)
     end
     
@@ -28,7 +29,7 @@ module MARC
       record
     end
         
-    def get_page(uri)
+    def get_page(uri)      
       resp = self.class.get(uri)
       if resp.code < 400
         resp.body
@@ -38,7 +39,7 @@ module MARC
     end
       
     def record_exists?(bibnumber)
-      page = get_page(URI_FOR_RECORD % bibnumber)
+      page = get_page(URI_FOR_RECORD % [bibnumber, @scope])
       return false unless page
       page.include?('No Such Record') ? false : true
     end
@@ -71,8 +72,8 @@ module MARC
     # and returning a MARC::Record object
     def get_record(bibnumber)
       if record_exists?(bibnumber)
-        marc_url = URI_FOR_MARC % Array.new(3, bibnumber)
-        record_url = URI_FOR_RECORD % bibnumber
+        marc_url = URI_FOR_MARC % ([@scope] + Array.new(3, bibnumber))
+        record_url = URI_FOR_RECORD % [bibnumber, @scope]
         
         # Retrieve MARC data and convert to UTF-8 prior to decoding ...
         record_page = get_page(marc_url)
@@ -82,10 +83,10 @@ module MARC
           raise ParserError, "Could not decode data: MARC data not found."
         else
           record_data = record_data[1].strip()
-          record_data = Iconv.conv('UTF-8','LATIN1',record_data)
+          record_data = Iconv.conv('UTF-8', 'LATIN1', record_data)
         end
 
-        record = decode_raw(record_data)
+        record = decode_pseudo_marc(record_data)
         unless record.nil?
           record.bibnum = bibnumber
           record.raw = record_data
@@ -110,7 +111,7 @@ module MARC
     # ---
     # Only data conversion done is replacing HTML entities with their 
     # corresponding characters
-    def decode_raw(pseudo_marc)
+    def decode_pseudo_marc(pseudo_marc)
       raise ParserError, "Cannot decode empty string." if pseudo_marc == ""
       
       pseudo_marc = pseudo_marc.split("\n")      
@@ -158,6 +159,49 @@ module MARC
       end
       
       return record
+    end
+    
+    
+    
+    
+    def keyword_search(query)
+      results = []
+      page = get_page(URI_FOR_KEYWORD_SEARCH % [@scope, URI.escape(query)])
+      return results unless page
+    
+      doc = Nokogiri::HTML(page)      
+      doc.xpath('//td[@class="briefCitRow"]').each do |row|
+        match = {}
+        match[:bibnum] = row.search('td[@class="briefcitEntryMark"] input[@type=checkbox]').attribute("value")
+        match[:title] = row.search('span[@class="briefcitTitle"]').text
+        match[:year] = row.search('td[@class="briefcitYear"]').text
+        results << match
+      end
+      results
+    end
+    
+    def title_search(query)
+      results = []
+      page = get_page(URI_FOR_TITLE_SEARCH % [@scope, URI.escape(query)])
+      return results unless page
+      
+      doc = Nokogiri::HTML(page)      
+      doc.xpath('//tr[@class="browseEntry"]').each do |row|
+        match = {:title => '', :items => '', :author => '', :call_number => ''}
+        match[:title] = row.search('td[@class="browseEntryData"] a').text.strip_end_punctuation
+        match[:items] = row.search('td[@class="browseEntryEntries"]').text
+        
+        auth_call = row.search('./td[@class="browseEntryData"]/a/following-sibling::text()')[0].text
+        auth_call = auth_call.strip_punctuation
+        if auth_call.include?(';')
+          auth, call = auth_call.strip.split(';')
+          match[:author] = auth.strip_punctuation
+          match[:call_number] = call.strip_punctuation
+        end
+        
+        results << match
+      end
+      results
     end
     
   end  

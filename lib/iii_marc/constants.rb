@@ -1,8 +1,11 @@
 module MARC
   
-  URI_FOR_RECORD = '/record=%s~S2'
-  URI_FOR_MARC = '/search~S2?/.%s/.%s/1%%2C1%%2C1%%2CB/marc~%s'
+  URI_FOR_RECORD = '/record=%s~S%s'
+  URI_FOR_MARC = '/search~S%s/.%s/.%s/1%%2C1%%2C1%%2CB/marc~%s'
   MARC_REGEX = Regexp.new('<pre>(.+)</pre>', Regexp::MULTILINE)
+  
+  URI_FOR_KEYWORD_SEARCH = '/search~S%s/?searchtype=X&searcharg=%s'
+  URI_FOR_TITLE_SEARCH = '/search~S%s/?searchtype=t&searcharg=%s'
   
   RECORD_TYPES = {
     'BKS' => MARC::BookRecord,

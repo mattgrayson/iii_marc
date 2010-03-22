@@ -11,10 +11,11 @@ It has only been tested against Release 2007 with WebPac Pro.
 
 == Requirements
 
-* marc http://marc.rubyforge.org/
+* marc http://marc.rubyforge.org
 * enhanced_marc http://github.com/rsinger/enhanced-marc
 * httparty http://github.com/jnunemaker/httparty
 * htmlentities http://github.com/threedaymonk/htmlentities
+* nokogiri http://github.com/tenderlove/nokogiri
 
 == Copyright
 
