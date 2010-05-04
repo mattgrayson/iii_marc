@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{iii_marc}
-  s.version = "0.0.1"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Grayson"]
-  s.date = %q{2009-12-21}
+  s.date = %q{2010-04-08}
   s.description = %q{Utilities for interacting with III Millennium WebPac.  Primary goal is to retrieve and parse bibliographic records via the  WebPac proto-MARC output.}
   s.email = %q{mattgrayson@eitheror.org}
   s.extra_rdoc_files = [
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "iii_marc.gemspec",
      "lib/iii_marc.rb",
      "lib/iii_marc/constants.rb",
      "lib/iii_marc/datafield.rb",
@@ -30,12 +31,20 @@ Gem::Specification.new do |s|
      "lib/iii_marc/record.rb",
      "lib/iii_marc/utils.rb",
      "test/helper.rb",
+     "test/pages/marc_b1052826.html",
+     "test/pages/marc_b1069566.html",
+     "test/pages/marc_b1069570.html",
+     "test/pages/marc_b1069571.html",
+     "test/pages/marc_b1069580.html",
+     "test/pages/search_keyword_cancer.html",
+     "test/pages/search_keyword_no_results.html",
+     "test/pages/search_title_organic_chemistry.html",
      "test/test_iii_marc.rb"
   ]
   s.homepage = %q{http://github.com/mattgrayson/iii_marc}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Utilities for interacting with III Millennium WebPac.  Primary goal is to retrieve and parse bibliographic records via the  WebPac proto-MARC output.}
   s.test_files = [
     "test/helper.rb",
@@ -47,21 +56,24 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+      s.add_development_dependency(%q<shoulda>, [">= 0"])
+      s.add_development_dependency(%q<fakeweb>, [">= 0"])
       s.add_runtime_dependency(%q<enhanced_marc>, [">= 0"])
       s.add_runtime_dependency(%q<htmlentities>, [">= 0"])
-      s.add_runtime_dependency(%q<patron>, [">= 0"])
+      s.add_runtime_dependency(%q<httparty>, [">= 0"])
     else
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+      s.add_dependency(%q<shoulda>, [">= 0"])
+      s.add_dependency(%q<fakeweb>, [">= 0"])
       s.add_dependency(%q<enhanced_marc>, [">= 0"])
       s.add_dependency(%q<htmlentities>, [">= 0"])
-      s.add_dependency(%q<patron>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0"])
     end
   else
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+    s.add_dependency(%q<shoulda>, [">= 0"])
+    s.add_dependency(%q<fakeweb>, [">= 0"])
     s.add_dependency(%q<enhanced_marc>, [">= 0"])
     s.add_dependency(%q<htmlentities>, [">= 0"])
-    s.add_dependency(%q<patron>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0"])
   end
 end
 
